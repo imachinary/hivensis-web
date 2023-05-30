@@ -1,0 +1,14 @@
+{
+  "login": "Login",
+  "email": "Email",
+  "password": "Password",
+  "Please enter a valid email address": "Please enter a valid email address",
+  "Submit": "Submit",
+  "Forgot your password?": "Forgot your password?",
+  "Don't have an account?": "Don't have an account?",
+  "Sign up": "Sign up",
+  "Enter your email address below and we'll send you a link to reset it.": "Enter your email address below and we'll send you a link to reset it.",
+  "My account": "My account",
+  "Profile": "Profile"
+
+}
