@@ -35,7 +35,7 @@ const LanguageSelector = () => {
 
   return (
     <Box style={{marginRight: "20px"}}>
-      <Tooltip title="Open settings">
+      <Tooltip title="Languages">
         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
           <LanguageIcon/>
         </IconButton>

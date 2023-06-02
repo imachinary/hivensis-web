@@ -33,7 +33,7 @@ const LanguageSelector = () => {
 
   return (
     <Box style={{marginRight: "20px"}} sx={{ display: {sx: "block", md: "hide"}}}>
-      <Tooltip title="Open settings">
+      <Tooltip title="Menu">
         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
           <MenuIcon/>
         </IconButton>
@@ -56,7 +56,7 @@ const LanguageSelector = () => {
       >
         {sections.map((section, index) => (
           <MenuItem key={index}>
-            <Link href={section.anchor}>
+            <Link href={section.anchor} sx={{textDecoration: "none", color:"#323232"}}>
               {t(section.label, NameSpacesParm.common)}
             </Link>
           </MenuItem>

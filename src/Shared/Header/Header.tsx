@@ -13,7 +13,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import { Container, SwipeableDrawer } from '@mui/material';
+import { Button, Container, Link } from '@mui/material';
 import { UserRoles } from '../enum/userRoles';
 
 import LanguageSelector from "../LanguageSelector";
@@ -89,7 +89,11 @@ export default function Header(props: any) {
     console.log(drawerState)
   };
 
-  const pages = ['Products', 'Pricing', 'Blog'];
+  const sections = [
+    { anchor: '#why-hivensis', label: 'Why Hivensis?' },
+    { anchor: '#key-features', label: "Key features" },
+    { anchor: '#waiting-list', label: 'Waiting List' },
+  ];
 
   const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
@@ -123,13 +127,25 @@ export default function Header(props: any) {
     
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Container>
       <CssBaseline />
       <AppBar position="fixed">
+        <Container maxWidth="xl" >
         <Toolbar>
         <div style={{textAlign:"left"}}><img alt="logo" style={{width: "100%"}} src="/logo_Hivensis.png"/></div>              
           <Typography variant="h6" noWrap component="div"  sx={{ flexGrow: 1 }}>            
           </Typography>
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            {sections.map((section, key) => (
+              <Link
+                key={key}
+                href={section.anchor}
+                sx={{ my: 2, color: '#323232', display: 'block', marginRight: "25px", fontSize: "14px", fontWeight: "400", textDecoration:"none" }}
+              >
+                {t(section.label, NameSpacesParm.common)}
+              </Link>
+            ))}
+          </Box>
           <LanguageSelector/>   
           <Box sx={{ display: {xs: "block", md: "none"}}}>            
           <Menu/>      
@@ -137,7 +153,8 @@ export default function Header(props: any) {
           
          
         </Toolbar>
+        </Container>
       </AppBar>    
-    </Box>
+    </Container>
   );
 };

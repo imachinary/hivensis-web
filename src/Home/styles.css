@@ -1,0 +1,32 @@
+.feature-item{
+  text-align: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.feature-title{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.waiting-list-title{
+  color: #FF9E44;
+  font-size:36px !important;
+  font-weight: 700  !important;
+}
+
+.hero-button{
+  height: 47;
+  padding: 14px 24px;
+  background-color: #FFFF;
+  color: #FF9E44;
+  text-decoration: none;
+  position: absolute;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+a{
+  text-decoration: none;
+}
