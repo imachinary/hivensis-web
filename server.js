@@ -3,17 +3,19 @@ const path = require("path");
 const app = express();
 const compress = require("compression");
 const cors = require("cors");
-const helmet = require("helmet");
+const bodyParser = require('body-parser');
 
-const routes = require("./server/api/routes");
+//const helmet = require("helmet");
 
-const { HttpErrorHandler } = require("./server/middleware/HttpErrorHandler");
+const routes = require("./server/routes");
+
+//const { HttpErrorHandler } = require("./server/middleware/HttpErrorHandler");
 require("dotenv").config();
 
-const { ErrorHandler } = require("./server/middleware/ErrorHandler");
+//const { ErrorHandler } = require("./server/middleware/ErrorHandler");
 
 app.use(cors());
-app.use(helmet());
+//app.use(helmet());
 app.use(compress());
 app.disable("x-powered-by");
 app.use(express.json());
@@ -32,8 +34,10 @@ app.use(function (req, res, next) {
 });
 
 app.use(express.static(path.join(__dirname, "build")));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-app.use("/api", routes);
+app.use("/", routes);
 
 app.get("/ping", function (req, res) {
   console.log("pong");
@@ -52,8 +56,8 @@ app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-app.use(HttpErrorHandler);
-app.use(ErrorHandler);
+// app.use(HttpErrorHandler);
+// app.use(ErrorHandler);
 
 app.listen(process.env.SERVER_PORT || 8080, () => {
   console.log("server ready listening on port" + process.env.SERVER_PORT);

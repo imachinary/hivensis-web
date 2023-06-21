@@ -17,7 +17,7 @@ const LanguageSelector = () => {
   };
 
   const sections = [
-    { anchor: '#whi-hivensis', label: 'Why Hivensis?' },
+    { anchor: '#why-hivensis', label: 'Why Hivensis?' },
     { anchor: '#key-features', label: 'Key features' },
     { anchor: '#waiting-list', label: 'Waiting List' },
   ];

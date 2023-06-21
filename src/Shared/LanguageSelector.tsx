@@ -21,7 +21,12 @@ const LanguageSelector = () => {
 
   const settings = [
     { code: 'en', language: 'English' },
-    { code: 'es', language: 'Español' }
+    { code: 'es', language: 'Español' },
+    { code: 'fr', language: 'Français' },
+    { code: 'pt', language: 'Português' },
+    { code: 'ja', language: '日本語' },
+    { code: 'de', language: 'Deutsch' },
+
   ];
 
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {

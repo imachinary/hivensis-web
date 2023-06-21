@@ -10,7 +10,7 @@ import { NameSpaces } from '../Shared/enum/i18nNamespaces';
 
 const Home = () => {
   const {t} = useTranslation([NameSpaces.common]);
-  document.title = t("Home");
+  document.title = "Hivensis - "+ t("Home");
   return (
     <div>
       

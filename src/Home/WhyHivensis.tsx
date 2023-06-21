@@ -9,6 +9,7 @@ import "./styles.css";
 const WhyHivensis = () => {  
   const { t } = useTranslation([NameSpaces.common]);
   
+  
   return (
     <div id="why-hivensis" style={{color: "black", paddingLeft: "50px", paddingRight: "50px", paddingTop: "100px"}}>
       <Container maxWidth="xl">
@@ -18,7 +19,7 @@ const WhyHivensis = () => {
      </Typography>
      </Box>
       <Grid container columnSpacing={12} sx={{marginTop: "70px", marginBottom: "70px"}}>
-        <Grid item xs={12} md={4} sx={{textAlign: "left"}}>
+        <Grid item xs={12} md={4} sx={{textAlign: "left", marginTop: {xs: "30px", md: "0px"}}}>
           <Typography sx={{fontSize: "20px", fontWeight: "700"}}>
             {t("Unified Workflows")}
           </Typography>
@@ -27,7 +28,7 @@ const WhyHivensis = () => {
             {t("Traditional translation processes involve multiple disconnected tools and platforms, making collaboration and coordination difficult. This fragmentation leads to inefficiencies, delays, and increased costs. Hivensis connects all the essential steps in the translation process, providing a unified platform for translators, editors, reviewers, and project managers. By centralizing the workflow, Hivensis eliminates fragmentation, streamlines operations, and ensures a smoother translation process.")}
           </Typography>
         </Grid>
-        <Grid item xs={12} md={4} sx={{textAlign: "left"}}>
+        <Grid item xs={12} md={4} sx={{textAlign: "left", marginTop: {xs: "30px", md: "0px"}}}>
           <Typography sx={{fontSize: "20px", fontWeight: "700"}}>
             {t("Seamless Integration")}    
           </Typography>
@@ -38,7 +39,7 @@ const WhyHivensis = () => {
           
           
         </Grid>
-        <Grid item xs={12} md={4} sx={{textAlign: "left"}}>
+        <Grid item xs={12} md={4} sx={{textAlign: "left", marginTop: {xs: "30px", md: "0px"}}}>
           <Typography sx={{fontSize: "20px", fontWeight: "700"}}>
             {t("Enhances Collaboration")}
           </Typography>

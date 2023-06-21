@@ -132,7 +132,7 @@ export default function Header(props: any) {
       <AppBar position="fixed">
         <Container maxWidth="xl" >
         <Toolbar>
-        <div style={{textAlign:"left"}}><img alt="logo" style={{width: "100%"}} src="/logo_Hivensis.png"/></div>              
+        <a href="#" style={{textAlign:"left"}}><img alt="logo" style={{width: "100%"}} src="/logo_Hivensis.png"/></a>              
           <Typography variant="h6" noWrap component="div"  sx={{ flexGrow: 1 }}>            
           </Typography>
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
