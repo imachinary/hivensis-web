@@ -3,10 +3,13 @@ import { Button, Grid, Link, Typography } from '@mui/material';
 import { NameSpaces, NameSpacesParm } from '../Shared/enum/i18nNamespaces';
 import { useTranslation } from 'react-i18next';
 import { Box, Container } from '@mui/system';
+import { ImagesearchRoller } from '@mui/icons-material';
 
 const Hero = () => {  
   const { t } = useTranslation([NameSpaces.common]);
   
+  const paddingSize = window.innerWidth >= 768 ? '70px' : '0px';
+  const imageSize = window.innerWidth >= 768 ? 'auto%' : '-webkit-fill-available';
   return (
     <div style={{color: "black", background: "linear-gradient(255.61deg, #FFBB54 0%, #ED7200 100%)"}}>
       <Container maxWidth="xl">
@@ -29,8 +32,8 @@ const Hero = () => {
         <Box sx={{display: {xs: "none", md: "none", lg: "block"}}} style={{mixBlendMode: "color-burn", backgroundImage: "/hexagon_pattern.png", position: "absolute",width: "50%", height: "200px"}}>
           <img src="hexagon-pattern.png" alt="hexagon-pattern"  style={{width: "100%", marginLeft: "0%"}}/>
         </Box>    
-        <div style={{padding: "70px"}}>
-        <img src="/hero_image.png" alt="hero-image" />
+        <div style={{ padding: paddingSize}}>
+          <img src="/hero_image.png" alt="hive" style={{width: imageSize}}/>
         </div>         
         </Grid>
       </Grid>
