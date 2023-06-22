@@ -12,7 +12,12 @@ exports.waitingList = async (req, res) => {
   });
 
   const { email, languageCode } = req.body;
-  const ipAddress = req.ip;
+  let ipAddress = req.ip;
+
+  if (req.headers['x-forwarded-for']) {
+    // Get the first IP address in the forwarded chain.
+    ipAddress = req.headers['x-forwarded-for'].split(',')[0];
+  }
   const geo = geoip.lookup(ipAddress);
   const country = geo ? geo.country : 'Unknown';
 
